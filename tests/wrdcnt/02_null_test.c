@@ -10,4 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+#include <wrdcnt.h>
 
+int		wrdcnt_02_null_test(void)
+{
+	return (1);
+}

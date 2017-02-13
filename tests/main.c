@@ -23,6 +23,6 @@ static void		print_header(void)
 int		main(void)
 {
 	print_header();
-	wrdcnt_launcher();
+	wrdcnt_00_launcher();
 	return (0);
 }

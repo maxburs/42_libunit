@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		hello_basic_test(void)
+#include <libft.h>
+#include <wrdcnt.h>
+
+int		wrdcnt_01_basic_test(void)
 {
-	ft_putstr("i'm a basic test!! :D");
 	return (0);
 }

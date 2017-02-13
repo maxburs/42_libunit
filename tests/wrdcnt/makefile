@@ -3,12 +3,12 @@ NAME = ../wrdcnt.a
 SRCS = wrdcnt.c \
 		00_launcher.c \
 		01_basic_test.c \
-#		02_null_test.c \
+		02_null_test.c \
 		03_bigger_str_test.c
 
 OBJS = $(SRCS:.c=.o)
 
-HEADERS = -I ../../framework -I ../../framework/libft
+HEADERS = -I ../../framework -I ../../framework/libft -I .
 
 CFLAGS = -Wall -Wextra -Werror
 

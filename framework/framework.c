@@ -11,9 +11,70 @@
 /* ************************************************************************** */
 
 #include <libft.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <framework.h>
+#include <stdlib.h>
 
-int		framework_hello(void)
+static void		handle_signal(int status)
 {
-	ft_putstr("why hello! I'm the framework\n");
-	return (0);
+	if (status == SIGSEGV)
+	{
+		ft_putstr("SEGV");
+	}
+	else if (status == SIGSEGV)
+	{
+		ft_putstr("BUSE");
+	}
+	else
+	{
+		ft_putstr("unknown signal with code: ");
+		ft_putnbr(status);
+	}
+}
+
+static void		handle_exit(t_result *result, int status)
+{
+	if (status == 0)
+	{
+		result->passed++;
+		ft_putstr("OK");
+	}
+	else if (status == 1)
+	{
+		ft_putstr("KO");
+	}
+	else
+	{
+		ft_putstr("unknown function result with code: ");
+		ft_putnbr(status);
+	}
+}
+
+void			run_test(t_result *result, char const *name, int (*test)(void))
+{
+	int		status;
+	pid_t	f;
+
+	result->tried++;
+	ft_putstr(" > ");
+	ft_putstr(name);
+	ft_putstr(": ");
+	f = fork();
+	if (f == 0)
+		exit((*test)());
+	else if (f == -1)
+		ft_putstr("FORK FAILED");
+	else
+	{
+		wait(&status);
+		if (WIFSIGNALED(status))
+			handle_signal(WTERMSIG(status));
+		else if (WIFEXITED(status))
+			handle_exit(result, WEXITSTATUS(status));
+		else
+			ft_putstr("unknown wait result");
+	}
+	ft_putchar('\n');
 }

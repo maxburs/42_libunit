@@ -24,7 +24,7 @@ $(NAME): $(OBJS) $(LIBS) $(FRMWRK)
 %.o: %.c
 	gcc $(CFLAGS) $(HEADERS) -c -o $@ $<
 
-$(FRMWRK): framework/
+$(FRMWRK): framework
 	cd framework && $(MAKE)
 
 tests/%.a: tests/%

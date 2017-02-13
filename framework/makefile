@@ -8,6 +8,8 @@ LIBFT = libft/libft.a
 
 HEADERS = -I . -I libft
 
+CFLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 
 $(NAME): $(OBJS) ./libft/libft.a
@@ -22,7 +24,8 @@ $(LIBFT): libft/
 	gcc $(CFLAGS) $(HEADERS) -c -o $@ $<
 
 clean:
-	cd libft && $(MAKE) fclean
+	rm -f $(OBJS)
+#	cd libft && $(MAKE) fclean
 fclean: clean
 	rm -f $(NAME)
 re: fclean all

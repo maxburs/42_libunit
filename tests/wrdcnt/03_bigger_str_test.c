@@ -10,4 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** should segfault
+*/
 
+int		wrdcnt_03_bigger_str_test(void)
+{
+	int		*ptr;
+	int		res;
+
+	ptr = &res;
+	while (1)
+	{
+		ptr++;
+		res = *ptr;
+	}
+	return (0);
+}
