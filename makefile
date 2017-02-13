@@ -12,7 +12,7 @@ DIRS = $(LIBS:.a=)
 
 OBJS = $(SRCS:.c=.o)
 
-HEADERS = -I framework -I framework/libft
+HEADERS = -I framework -I framework/libft $(addprefix -I ,$(DIRS))
 
 CFLAGS = -Wall -Wextra -Werror
 

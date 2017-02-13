@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libunit.h>
+#include <framework.h>
 #include <libft.h>
 
 int		wrdcnt_launcher(void)
 {
-	ft_putstr("working!!");
+	ft_putstr("working!!\n");
+	framework_hello();
+	hello_basic_test();
 	return (0);
 }

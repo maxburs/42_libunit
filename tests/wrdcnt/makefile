@@ -1,6 +1,7 @@
 NAME = ../wrdcnt.a
 
-SRCS = 00_launcher.c \
+SRCS = wrdcnt.c \
+		00_launcher.c \
 		01_basic_test.c \
 #		02_null_test.c \
 		03_bigger_str_test.c

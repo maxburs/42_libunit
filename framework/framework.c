@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   framework.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 23:00:44 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:00:48 by mburson          ###   ########.fr       */
+/*   Created: 2017/02/13 02:06:42 by mburson           #+#    #+#             */
+/*   Updated: 2017/02/13 02:06:43 by mburson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <wrdcnt.h>
 
-static void		print_header(void)
+int		framework_hello(void)
 {
-	ft_putstr("*********************************\n");
-	ft_putstr("**      42 - Unit Tests      ****\n");
-	ft_putstr("*********************************\n");
-}
-
-int		main(void)
-{
-	print_header();
-	wrdcnt_launcher();
+	ft_putstr("why hello! I'm the framework\n");
 	return (0);
 }
