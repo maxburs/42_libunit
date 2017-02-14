@@ -10,6 +10,7 @@ LIBS = \
 		ft_strdup.a \
 		ft_strnequ.a \
 		ft_strstr.a \
+		ap_itoa_base.a \
 	)
 
 FRMWRK = framework/framework.a
