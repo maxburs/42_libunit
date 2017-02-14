@@ -6,6 +6,7 @@ SRCS = \
 		01_basic_test.c \
 		02_null_test.c \
 		03_advanced_test.c \
+		04_more_test.c \
 
 OBJS = $(SRCS:.c=.o)
 
