@@ -6,7 +6,7 @@
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 02:06:42 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/13 22:33:37 by aphan            ###   ########.fr       */
+/*   Updated: 2017/02/13 22:55:44 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,37 @@ static void		handle_signal(int status)
 {
 	if (status == SIGSEGV)
 	{
-		ft_putstr("SEGV");
+		INVERSE RED	ft_putstr("SEGV");
 	}
 	else if (status == SIGBUS)
 	{
-		ft_putstr("BUSE");
+		BOLD RED ft_putstr("BUSE");
 	}
 	else
 	{
 		ft_putstr("unknown signal with code: ");
 		ft_putnbr(status);
 	}
+	RESET
 }
 
 static void		handle_exit(t_result *result, int status)
 {
 	if (status == 0)
 	{
-		result->passed++;
+		GREEN result->passed++;
 		ft_putstr("OK");
 	}
 	else if (status == 1)
 	{
-		ft_putstr("KO");
+		RED	ft_putstr("KO");
 	}
 	else
 	{
 		ft_putstr("unknown function result with code: ");
 		ft_putnbr(status);
 	}
+	RESET
 }
 
 void			print_result(t_result *result)

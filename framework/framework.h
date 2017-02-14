@@ -3,6 +3,12 @@
 
 # include <string.h>
 
+# define RESET write(1, "\x1b[0m", 4);
+# define GREEN write(1, "\x1b[32m", 5);
+# define RED write(1, "\x1b[31m", 5);
+# define INVERSE write(1, "\x1b[7m", 4);
+# define BOLD write(1, "\x1b[1m", 4);
+
 typedef struct		s_result
 {
 	size_t		passed;
