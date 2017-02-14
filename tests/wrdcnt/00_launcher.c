@@ -6,7 +6,7 @@
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 23:00:57 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:00:59 by mburson          ###   ########.fr       */
+/*   Updated: 2017/02/13 15:38:23 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		wrdcnt_00_launcher(void)
 	run_test(&result, "basic", &wrdcnt_01_basic_test);
 	run_test(&result, "null", &wrdcnt_02_null_test);
 	run_test(&result, "bigger string", &wrdcnt_03_bigger_str_test);
+	run_test(&result, "bus error", &wrdcnt_04_bus_error_test);
 	return (0);
 }

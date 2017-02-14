@@ -6,7 +6,7 @@
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 02:06:42 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/13 02:06:43 by mburson          ###   ########.fr       */
+/*   Updated: 2017/02/13 15:27:53 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void		handle_signal(int status)
 	{
 		ft_putstr("SEGV");
 	}
-	else if (status == SIGSEGV)
+	else if (status == SIGBUS)
 	{
 		ft_putstr("BUSE");
 	}
