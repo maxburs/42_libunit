@@ -41,7 +41,7 @@ real-tests/%.a: real-tests/%
 
 clean:
 	rm -f $(LIBS)
-	$(foreach dir,$(DIR), cd $dir && $MAKE fclean)
+	$(foreach dir,$(DIRS), (cd $(dir) && $(MAKE) fclean);)
 	cd framework && $(MAKE) fclean
 fclean: clean
 	rm -f $(NAME)
