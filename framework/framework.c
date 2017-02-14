@@ -6,7 +6,7 @@
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 02:06:42 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/13 15:27:53 by aphan            ###   ########.fr       */
+/*   Updated: 2017/02/13 21:31:33 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void		handle_exit(t_result *result, int status)
 		result->passed++;
 		ft_putstr("OK");
 	}
-	else if (status == 1)
+	else if (status == -1)
 	{
 		ft_putstr("KO");
 	}
