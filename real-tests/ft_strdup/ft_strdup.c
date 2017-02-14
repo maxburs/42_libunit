@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 23:00:44 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:00:48 by mburson          ###   ########.fr       */
+/*   Created: 2016/11/29 17:30:54 by mburson           #+#    #+#             */
+/*   Updated: 2016/11/29 17:30:56 by mburson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <libft.h>
-#include <wrdcnt.h>
-#include <ft_strdup.h>
-#include <ft_strnequ.h>
-#include <ft_strstr.h>
+#include <string.h>
+#include <errno.h>
 
-static void		print_header(void)
+char	*ft_strdup(const char *str)
 {
-	ft_putstr("*********************************\n");
-	ft_putstr("**      42 - Unit Tests      ****\n");
-	ft_putstr("*********************************\n");
-}
+	char	*new_str;
+	int		i;
 
-int		main(void)
-{
-	print_header();
-	wrdcnt_00_launcher();
-	ft_strdup_00_launcher();
-	ft_strnequ_00_launcher();
-	ft_strstr_00_launcher();
-	return (0);
+	if (!(new_str = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+	i = 0;
+	while (str[i])
+	{
+		new_str[i] = str[i];
+		i++;
+	}
+	new_str[i] = '\0';
+	return (new_str);
 }

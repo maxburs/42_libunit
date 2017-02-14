@@ -52,6 +52,14 @@ static void		handle_exit(t_result *result, int status)
 	}
 }
 
+void			print_result(t_result *result)
+{
+	ft_putnbr((int)(result->passed));
+	ft_putstr("/");
+	ft_putnbr((int)(result->tried));
+	ft_putstr(" tests passed\n");
+}
+
 void			run_test(t_result *result, char const *name, int (*test)(void))
 {
 	int		status;

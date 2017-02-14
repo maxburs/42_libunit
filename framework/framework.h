@@ -11,5 +11,6 @@ typedef struct		s_result
 
 void				run_test(t_result *result, char const *name,
 														int (*test)(void));
+void				print_result(t_result *result);
 
 #endif

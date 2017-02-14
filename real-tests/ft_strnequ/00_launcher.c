@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 23:00:44 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:00:48 by mburson          ###   ########.fr       */
+/*   Created: 2017/02/12 23:00:57 by mburson           #+#    #+#             */
+/*   Updated: 2017/02/13 15:38:23 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <framework.h>
 #include <libft.h>
-#include <wrdcnt.h>
-#include <ft_strdup.h>
 #include <ft_strnequ.h>
-#include <ft_strstr.h>
 
-static void		print_header(void)
+int		ft_strnequ_00_launcher(void)
 {
-	ft_putstr("*********************************\n");
-	ft_putstr("**      42 - Unit Tests      ****\n");
-	ft_putstr("*********************************\n");
-}
+	t_result	result;
 
-int		main(void)
-{
-	print_header();
-	wrdcnt_00_launcher();
-	ft_strdup_00_launcher();
-	ft_strnequ_00_launcher();
-	ft_strstr_00_launcher();
+	ft_putstr("FT_STRNEQU:\n");
+	result.passed = 0;
+	result.tried = 0;
+	print_result(&result);
 	return (0);
 }

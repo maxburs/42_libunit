@@ -2,9 +2,15 @@ NAME = libunit
 
 SRCS = tests/main.c
 
-LIBS = $(addprefix tests/, \
-	wrdcnt.a \
-)
+LIBS = \
+	$(addprefix tests/, \
+		wrdcnt.a \
+	) \
+	$(addprefix real-tests/, \
+		ft_strdup.a \
+		ft_strnequ.a \
+		ft_strstr.a \
+	)
 
 FRMWRK = framework/framework.a
 
@@ -28,6 +34,9 @@ $(FRMWRK): framework
 	cd framework && $(MAKE)
 
 tests/%.a: tests/%
+	cd $< && $(MAKE)
+
+real-tests/%.a: real-tests/%
 	cd $< && $(MAKE)
 
 clean:
