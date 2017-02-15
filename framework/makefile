@@ -25,7 +25,7 @@ $(LIBFT): libft/
 
 clean:
 	rm -f $(OBJS)
-#	cd libft && $(MAKE) fclean
+	cd libft && $(MAKE) fclean
 fclean: clean
 	rm -f $(NAME)
 re: fclean all

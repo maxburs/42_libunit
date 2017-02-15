@@ -2,6 +2,8 @@ NAME = tests
 
 SRCS = main.c
 
+OBJS = $(SRCS:.c=.o)
+
 LIBS = \
 	wrdcnt.a \
 
@@ -10,8 +12,6 @@ FRMWRK = ../framework/framework.a
 FRMWRK_DIR = $(FRMWRK:framework.a=)
 
 DIRS = $(LIBS:.a=)
-
-OBJS = $(SRCS:.c=.o)
 
 HEADERS = -I ../framework -I ../framework/libft $(addprefix -I ,$(DIRS))
 
@@ -35,6 +35,7 @@ clean:
 	rm -f $(LIBS)
 	$(foreach dir,$(DIRS), (cd $(dir) && $(MAKE) fclean);)
 	cd $(FRMWRK_DIR) && $(MAKE) fclean
+	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all

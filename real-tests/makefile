@@ -38,6 +38,7 @@ clean:
 	rm -f $(LIBS)
 	$(foreach dir,$(DIRS), (cd $(dir) && $(MAKE) fclean);)
 	cd $(FRMWRK_DIR) && $(MAKE) fclean
+	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
