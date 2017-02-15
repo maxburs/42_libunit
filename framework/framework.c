@@ -21,37 +21,50 @@ static void		handle_signal(int status)
 {
 	if (status == SIGSEGV)
 	{
-		INVERSE RED	ft_putstr("SEGV");
+		INVERSE;
+		RED;
+		ft_putstr("SEGV");
 	}
 	else if (status == SIGBUS)
 	{
-		BOLD RED ft_putstr("BUSE");
+		BOLD;
+		RED;
+		ft_putstr("BUSE");
 	}
 	else
 	{
 		ft_putstr("unknown signal with code: ");
 		ft_putnbr(status);
 	}
-	RESET
+	RESET;
 }
 
 static void		handle_exit(t_result *result, int status)
 {
 	if (status == 0)
 	{
-		GREEN result->passed++;
+		GREEN;
+		result->passed++;
 		ft_putstr("OK");
 	}
 	else if (status == 1)
 	{
-		RED	ft_putstr("KO");
+		RED;
+		ft_putstr("KO");
 	}
 	else
 	{
 		ft_putstr("unknown function result with code: ");
 		ft_putnbr(status);
 	}
-	RESET
+	RESET;
+}
+
+void			print_header(void)
+{
+	ft_putstr("*********************************\n");
+	ft_putstr("**      42 - Unit Tests      ****\n");
+	ft_putstr("*********************************\n");
 }
 
 void			print_result(t_result *result)

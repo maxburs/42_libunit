@@ -18,8 +18,8 @@ int		ft_strstr_01_basic_test(void)
 	int		result;
 
 	result = 0;
-	result += strcmp("w", ft_strstr("abc def meow","w")) ? 1 : 0;
-	result += strcmp("meow", ft_strstr("abc def meow","meow")) ? 1 : 0;
-	result += ft_strstr("abc def meow","z") != 0 ? 1 : 0;
+	result += strcmp("w", ft_strstr("abc def meow", "w")) ? 1 : 0;
+	result += strcmp("meow", ft_strstr("abc def meow", "meow")) ? 1 : 0;
+	result += ft_strstr("abc def meow", "z") != 0 ? 1 : 0;
 	return (result ? -1 : 0);
 }

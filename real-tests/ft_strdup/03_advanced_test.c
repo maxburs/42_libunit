@@ -22,6 +22,6 @@ int		ft_strdup_03_advanced_test(void)
 	s1 = strdup("meow");
 	s2 = ft_strdup(s1);
 	result = 0;
-	result += !(!strcmp(s1, s2) && (*s1 = 1) && strcmp(s1, s2))? 1 : 0;
+	result += !(!strcmp(s1, s2) && (*s1 = 1) && strcmp(s1, s2)) ? 1 : 0;
 	return (result ? -1 : 0);
 }

@@ -15,7 +15,7 @@
 
 int		ap_itoa_base_04_negative_test(void)
 {
-	int 	result;
+	int		result;
 
 	result = 0;
 	result += strcmp("-42", ap_itoa_base(-42, 10)) ? 1 : 0;

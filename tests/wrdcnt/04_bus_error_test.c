@@ -14,8 +14,11 @@
 
 int		wrdcnt_04_bus_error_test(void)
 {
-	char	*s1 = "this is ";
-	char	*s2 = "me";
+	char	*s1;
+	char	*s2;
+
+	s1 = "this is ";
+	s2 = "me";
 	ft_strcat(s1, s2);
 	ft_putstr(s1);
 	return (0);

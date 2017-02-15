@@ -19,6 +19,6 @@ int		ap_itoa_base_02_null_test(void)
 
 	null = NULL;
 	ap_itoa_base(*null, 2);
-	ap_itoa_base(42, *null);	
+	ap_itoa_base(42, *null);
 	return (0);
 }

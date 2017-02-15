@@ -12,13 +12,7 @@
 
 #include <libft.h>
 #include <wrdcnt.h>
-
-static void		print_header(void)
-{
-	ft_putstr("*********************************\n");
-	ft_putstr("**      42 - Unit Tests      ****\n");
-	ft_putstr("*********************************\n");
-}
+#include <framework.h>
 
 int		main(void)
 {

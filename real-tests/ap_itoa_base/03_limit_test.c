@@ -15,7 +15,7 @@
 
 int		ap_itoa_base_03_limit_test(void)
 {
-	int 	result;
+	int		result;
 
 	result = 0;
 	result += strcmp("2147483647", ap_itoa_base(2147483647, 10)) ? 1 : 0;
