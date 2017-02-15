@@ -20,6 +20,8 @@ char	*ft_strdup(const char *str)
 	char	*new_str;
 	int		i;
 
+	if (str == NULL)
+		return (NULL);
 	if (!(new_str = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 	{
 		errno = ENOMEM;
