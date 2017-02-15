@@ -12,15 +12,21 @@
 
 #include <string.h>
 
+/*
+** if (*str != split)
+** {
+** 	count++;
+** }
+**
+** removed previous piece of code from before while loop to break function
+** function no longer finds words at start of str
+*/
+
 size_t	ft_wrdcnt(const char *str, char split)
 {
 	size_t	count;
 
 	count = 0;
-	if (*str != split)
-	{
-		count++;
-	}
 	while (*str)
 	{
 		if (*str == split && str[1] != split && str[1])

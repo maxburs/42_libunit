@@ -22,8 +22,8 @@ int		wrdcnt_00_launcher(void)
 	result.passed = 0;
 	result.tried = 0;
 	run_test(&result, "pass", &wrdcnt_01_basic_test);
-	run_test(&result, "fail", &wrdcnt_02_null_test);
-	run_test(&result, "segmentation fault", &wrdcnt_03_bigger_str_test);
+	run_test(&result, "fail", &wrdcnt_02_advanced_test);
+	run_test(&result, "segmentation fault", &wrdcnt_03_null_test);
 	run_test(&result, "bus error", &wrdcnt_04_bus_error_test);
 	print_result(&result);
 	return (0);

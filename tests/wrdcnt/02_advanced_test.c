@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_null_test.c                                     :+:      :+:    :+:   */
+/*   03_bigger_str_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 23:01:10 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:01:14 by mburson          ###   ########.fr       */
+/*   Created: 2017/02/12 23:01:17 by mburson           #+#    #+#             */
+/*   Updated: 2017/02/12 23:01:19 by mburson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <wrdcnt.h>
 
-int		wrdcnt_02_null_test(void)
+int		wrdcnt_02_advanced_test(void)
 {
-	return (1);
+	if (ft_wrdcnt("word ", ' ') != 1
+		|| ft_wrdcnt(" test test test", ' ') != 3
+		|| ft_wrdcnt(" happy happy happy happy ", 'p') != 5)
+		return (-1);
+	return (0);
 }

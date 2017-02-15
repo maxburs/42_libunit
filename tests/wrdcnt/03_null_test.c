@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_bigger_str_test.c                               :+:      :+:    :+:   */
+/*   02_null_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 23:01:17 by mburson           #+#    #+#             */
-/*   Updated: 2017/02/12 23:01:19 by mburson          ###   ########.fr       */
+/*   Created: 2017/02/12 23:01:10 by mburson           #+#    #+#             */
+/*   Updated: 2017/02/12 23:01:14 by mburson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** should segfault
-*/
+#include <libft.h>
+#include <wrdcnt.h>
 
-int		wrdcnt_03_bigger_str_test(void)
+int		wrdcnt_03_null_test(void)
 {
-	int		*ptr;
-	int		res;
-
-	ptr = &res;
-	while (1)
-	{
-		ptr++;
-		res = *ptr;
-	}
+	if (ft_wrdcnt(NULL, ' ') != 0)
+		return (-1);
 	return (0);
 }

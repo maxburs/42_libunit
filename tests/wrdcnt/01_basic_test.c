@@ -15,5 +15,9 @@
 
 int		wrdcnt_01_basic_test(void)
 {
+	if (ft_wrdcnt(" word ", ' ') != 1
+		|| ft_wrdcnt(" test test test ", ' ') != 3
+		|| ft_wrdcnt(" happy happy happy happy ", ' ') != 4)
+		return (-1);
 	return (0);
 }
