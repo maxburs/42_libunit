@@ -11,7 +11,10 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <wrdcnt.h>
+#include <ft_strdup.h>
+#include <ft_strnequ.h>
+#include <ft_strstr.h>
+#include <ap_itoa_base.h>
 
 static void		print_header(void)
 {
@@ -23,6 +26,9 @@ static void		print_header(void)
 int		main(void)
 {
 	print_header();
-	wrdcnt_00_launcher();
+	ft_strdup_00_launcher();
+	ft_strnequ_00_launcher();
+	ft_strstr_00_launcher();
+	ap_itoa_base_00_launcher();
 	return (0);
 }
