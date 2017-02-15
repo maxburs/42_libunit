@@ -47,7 +47,7 @@ static void		handle_exit(t_result *result, int status)
 		result->passed++;
 		ft_putstr("OK");
 	}
-	else if (status == 1)
+	else if (status == -1)
 	{
 		RED;
 		ft_putstr("KO");
@@ -86,7 +86,7 @@ void			run_test(t_result *result, char const *name, int (*test)(void))
 	ft_putstr(": ");
 	f = fork();
 	if (f == 0)
-		exit((*test)() ? 1 : 0);
+		exit((*test)());
 	else if (f == -1)
 		ft_putstr("FORK FAILED");
 	else
