@@ -95,7 +95,7 @@ void			run_test(t_result *result, char const *name, int (*test)(void))
 		if (WIFSIGNALED(status))
 			handle_signal(WTERMSIG(status));
 		else if (WIFEXITED(status))
-			handle_exit(result, WEXITSTATUS(status));
+			handle_exit(result, (int)(char)WEXITSTATUS(status));
 		else
 			ft_putstr("unknown wait result");
 	}
